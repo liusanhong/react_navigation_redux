@@ -1,0 +1,15 @@
+{
+  "name": "rn_navigation_redux",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "mobx-react": "^5.4.3",
+    "mobx-react-lite": "^1.1.1",
+    "react": "16.8.3",
+    "react-native": "0.59.5"
+  }
+}
