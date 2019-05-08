@@ -7,8 +7,9 @@
  */
 
 import React, {Component} from 'react';
-import {View, Text, } from 'react-native';
+import {View, Text,} from 'react-native';
 import {connect} from 'react-redux';
+
 const TAG = 'DetailPage';
 
 class DetailPage extends Component {
@@ -17,19 +18,24 @@ class DetailPage extends Component {
 	}
 
 	render() {
-		console.log(TAG,'this.props:::',this.props);
+		console.log(TAG, 'this.props:::', this.props);
 		return (
-			<View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-				<Text>DetailPage</Text>
+			<View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+				<Text
+					onPress={() => {
+						this.props.navigation.goBack();
+					}}
+					style={{color: 'red'}}
+				>GO Back </Text>
+				<Text style={{marginTop: 20}}>Detail Page</Text>
 			</View>
 		)
 	}
 
 }
 
-
 export default connect(({
 	                        nav
-})=>({
+                        }) => ({
 	nav
 }))(DetailPage)

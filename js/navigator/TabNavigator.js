@@ -6,10 +6,10 @@
  * @Project:rn_navigation_redux
  */
 import React from 'react';
-import {Image,Platform} from "react-native";
-import {TabNavigator,createAppContainer,createBottomTabNavigator} from 'react-navigation';
+import {Image} from "react-native";
+import {createAppContainer,createBottomTabNavigator} from 'react-navigation';
 import HomePage from '../page/HomePage';
-import DetailPage from '../page/DetailPage';
+import MinePage from '../page/MinePage';
 
 
 const Tab = createBottomTabNavigator({
@@ -26,8 +26,8 @@ const Tab = createBottomTabNavigator({
 		},
 
 	},
-	DetailPage: {
-		screen: DetailPage,
+	MinePage: {
+		screen: MinePage,
 		navigationOptions : {
 			tabBarLabel: '我的',
 			tabBarIcon: ({ tintColor, focused }) => (
@@ -39,7 +39,8 @@ const Tab = createBottomTabNavigator({
 		},
 	},
 }, {
-	tabBarPosition: 'top',
+	swipeEnabled:true,
+	tabBarPosition: 'bottom',
 	animationEnabled: true,
 	tabBarOptions: {
 		activeTintColor: '#222',

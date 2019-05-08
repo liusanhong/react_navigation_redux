@@ -7,9 +7,10 @@
  */
 
 import React, {Component} from 'react';
-import {View, Text, } from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {connect} from 'react-redux';
 import NavigationUtil from "../../navigator/NavigationUtil";
+
 const TAG = 'HomePage';
 
 class HomePage extends Component {
@@ -18,31 +19,34 @@ class HomePage extends Component {
 	}
 
 	componentDidMount() {
-		console.log(TAG,'this.props::',this.props);
+		console.log(TAG, 'this.props::', this.props);
 	}
 
 	render() {
+		let {navigation} = this.props;
 		return (
-			<View style={{flex:1}}>
-				<Text
-					onPress={()=>{
-						console.log('Text::');
-						NavigationUtil.resetToHomPage(this.props)
-						// this.props.navigation.actions.navigate('DetailPage')
-						NavigationUtil.goPage('DetailPage')
+			<View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+				<Text>HomePage</Text>
+				<TouchableOpacity
+					onPress={() => {
+						navigation.navigate('DetailPage');
 					}}
-					style={{marginTop:50,left:50,color:'red'}}>HomePage</Text>
+					style={{marginTop: 20}}
+				>
+					<Text
+						style={{color: 'red'}}>Go to DetailPage </Text>
+				</TouchableOpacity>
+
 			</View>
 		)
 	}
 
 }
 
-
 export default connect(
 	({
 		 nav
-	 })=>({
+	 }) => ({
 		nav
 	})
 )(HomePage)
