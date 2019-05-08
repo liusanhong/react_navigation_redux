@@ -6,7 +6,6 @@ import Tab from './TabNavigator';
 
 import {connect} from 'react-redux';
 import {createReactNavigationReduxMiddleware, reduxifyNavigator} from 'react-navigation-redux-helpers';
-import DynamicTabNavigator from "./DynamicTabNavigator";
 
 export const rootCom = 'Init';//设置根路由
 
@@ -31,13 +30,7 @@ const MainNavigator = createStackNavigator({
             header: null,// 可以通过将header设为null 来禁用StackNavigator的Navigation Bar
         }
     },
-	TabNav: {
-		screen: DynamicTabNavigator,
-		navigationOptions: {//在这里定义每个页面的导航属性，静态配置
-			title: "This is TabNavigator.",
-			header: null,// 可以通过将header设为null 来禁用StackNavigator的Navigation Bar
-		}
-	},
+
 	Tab: {
 		screen: Tab,
 	},
