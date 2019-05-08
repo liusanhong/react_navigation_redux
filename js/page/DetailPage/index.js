@@ -8,6 +8,8 @@
 
 import React, {Component} from 'react';
 import {View, Text, } from 'react-native';
+import {connect} from 'react-redux';
+const TAG = 'DetailPage';
 
 class DetailPage extends Component {
 	constructor(props) {
@@ -15,8 +17,9 @@ class DetailPage extends Component {
 	}
 
 	render() {
+		console.log(TAG,'this.props:::',this.props);
 		return (
-			<View style={{flex:1}}>
+			<View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
 				<Text>DetailPage</Text>
 			</View>
 		)
@@ -25,4 +28,8 @@ class DetailPage extends Component {
 }
 
 
-export default DetailPage
+export default connect(({
+	                        nav
+})=>({
+	nav
+}))(DetailPage)

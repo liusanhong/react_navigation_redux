@@ -35,7 +35,7 @@ export default class NavigationUtil {
      */
     static resetToHomPage(params) {
         const {navigation} = params;
-        navigation.navigate("Main");
+        navigation.navigate("Tab");
         // navigation.navigate("TabNav", {name: 'Devio', tabs: []});
     }
 

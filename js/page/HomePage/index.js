@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {View, Text, } from 'react-native';
 import {connect} from 'react-redux';
 import NavigationUtil from "../../navigator/NavigationUtil";
+const TAG = 'HomePage';
 
 class HomePage extends Component {
 	constructor(props) {
@@ -17,7 +18,7 @@ class HomePage extends Component {
 	}
 
 	componentDidMount() {
-		console.log('this.props::',this.props);
+		console.log(TAG,'this.props::',this.props);
 	}
 
 	render() {
