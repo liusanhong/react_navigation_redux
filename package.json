@@ -6,7 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "mobx-react": "^5.4.3",
     "mobx-react-lite": "^1.1.1",
     "react": "16.8.3",
